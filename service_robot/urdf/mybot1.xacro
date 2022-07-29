@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<robot name="barista_kobuki" xmlns:xacro="http://ros.org/wiki/xacro">
+  
+  <!-- Constant value -->
+  <xacro:property name="M_SCALE" value="0.001"/>
+  <xacro:property name="M_PI" value="3.1415926535897931" />
+
+  <xacro:include filename="$(find service_robot)/urdf/materials.xacro" />
+  <xacro:include filename="$(find barista_description)/urdf/barista/barista_kobuki_gazebo.urdf.xacro"/>
+  <!-- Base -->
+  <xacro:include filename="$(find barista_description)/urdf/barista/barista_kobuki.urdf.xacro"/>
+  <!-- Stack -->
+  <xacro:include filename="$(find barista_description)/urdf/barista/barista_hexagons.urdf.xacro"/> 
+
+    <!-- Sensor (Lidar) -->
+  <xacro:include filename="$(find barista_description)/urdf/barista/barista_hokuyo.urdf.xacro"/>
+   
+    
+
+
+  
+</robot>
